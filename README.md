@@ -6,10 +6,9 @@ untiy 的一个延迟支持的小工具<br>
 <br>
 int oldtime = 0;<br>
 float timertmp = Time.time;<br>
-timerdc = Delay.Timer(5).OnComplete(() =><br>
+Delay.Timer(5).OnComplete(() =><br>
 {<br>
     Debug.LogError("Delay.Timer(5)");<br>
-    timerdc = null;<br>
 }).OnUpdate(() => {<br>
     int tmpv = (int)(Time.time - timertmp);<br>
     if (tmpv != oldtime)<br>
